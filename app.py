@@ -9,9 +9,7 @@ from transformers import (
     AutoModelForSequenceClassification
 )
 
-# ------------------------
 # PAGE CONFIG
-# ------------------------
 
 st.set_page_config(
     page_title="Review Issue Classifier",
@@ -19,9 +17,8 @@ st.set_page_config(
     layout="wide"
 )
 
-# ------------------------
 # LOAD MODEL
-# ------------------------
+
 
 @st.cache_resource
 def load_model():
