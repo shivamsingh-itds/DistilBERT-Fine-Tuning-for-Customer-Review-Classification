@@ -91,9 +91,9 @@ with st.sidebar:
     for issue in encoder.classes_:
         st.write(issue)
 
-# ------------------------
+
 # HEADER
-# ------------------------
+
 
 st.markdown(
     "<p class='big-font'>Customer Review Issue Classification</p>",
@@ -104,9 +104,9 @@ st.write(
     "Predict issue categories from customer reviews using a fine-tuned DistilBERT model."
 )
 
-# ------------------------
+
 # INPUT
-# ------------------------
+
 
 review = st.text_area(
     "Enter Customer Review",
@@ -123,9 +123,9 @@ clear_btn = col2.button(
     "🗑 Clear"
 )
 
-# ------------------------
+
 # PREDICTION
-# ------------------------
+
 
 if predict_btn and review:
 
@@ -165,9 +165,9 @@ if predict_btn and review:
         f"Confidence: {confidence*100:.2f}%"
     )
 
-    # --------------------
+
     # TOP 3 PREDICTIONS
-    # --------------------
+
 
     top_probs, top_idx = torch.topk(
         probs,
@@ -204,9 +204,9 @@ if predict_btn and review:
         use_container_width=True
     )
 
-    # --------------------
+
     # CHART
-    # --------------------
+ 
 
     fig = px.bar(
         df,
@@ -220,9 +220,9 @@ if predict_btn and review:
         use_container_width=True
     )
 
-# ------------------------
+
 # FOOTER
-# ------------------------
+
 
 st.markdown("---")
 
