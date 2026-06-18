@@ -103,10 +103,7 @@ st.markdown(
 st.write(
     "Predict issue categories from customer reviews using a fine-tuned DistilBERT model."
 )
-
-
 # INPUT
-
 
 review = st.text_area(
     "Enter Customer Review",
@@ -123,9 +120,7 @@ clear_btn = col2.button(
     "🗑 Clear"
 )
 
-
 # PREDICTION
-
 
 if predict_btn and review:
 
